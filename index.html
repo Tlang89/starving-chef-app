@@ -18,7 +18,10 @@
     }
 
     *{box-sizing:border-box}
-    
+    html, body {
+  height: auto;
+  overflow-x: hidden;
+}
     body{
       margin:0;
       background: radial-gradient(1200px 700px at 50% 10%, #1a140e 0%, var(--bg) 55%, #000 100%);
@@ -38,7 +41,11 @@ inset:0;
       z-index:50;
       transition: opacity .6s ease, visibility .6s ease;
     }
-    .enter.hidden{opacity:0; visibility:hidden; pointer-events:none}
+    .enter.hidden{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
 
     .enterCard{
       width:min(92vw, 560px);
@@ -286,26 +293,30 @@ inset:0;
       <div class="brand">
         <div class="logoDot">SC</div>
       </div>
-      <h1 class="enterTitle">Welcome to The Starving Chef</h1>
+
+      <h1 class="enterTitle">Welcome to The Starving Chef — Iowa</h1>
+
       <p class="enterSub">
-        Step inside a private-dining experience—custom menus crafted after a free consultation.
+        Step inside a private-dining experience—custom menus, crafted for your home.<br>
         Serving Des Moines + surrounding areas, Waterloo, and Cedar Falls.
       </p>
+
       <button class="enterBtn" id="enterBtn">Enter</button>
-      <p class="enterNote">Tip: tap “Next Page” to see the menu-style flip.</p>
+      <p class="enterNote">Tip: tap “Next Page” to flip like a menu.</p>
     </div>
-  </section>
+</section>
 
-  <header>
-<div class="heroLogo" aria-label="The Starving Chef logo">
-  <img src="logo.jpeg" alt="The Starving Chef logo" class="heroLogoImg">
-</div>
-    <h1 class="siteTitle">The Starving Chef — Iowa</h1>
-    <p class="tagline">
-      Private chef dinners • Custom menus • Free consultation • Crafted for homes, date nights, and small events.
-    </p>
-  </header>
+<header>
+  <div class="heroLogo" aria-label="The Starving Chef logo">
+    <img src="logo.jpeg" alt="The Starving Chef logo" class="heroLogoImg">
+  </div>
 
+  <h1 class="siteTitle">The Starving Chef — Iowa</h1>
+
+  <p class="tagline">
+    Private chef dinners • Custom menus • Free consultation • Crafted for homes, date nights, and small events.
+  </p>
+</header>
   <main class="wrap">
     <div class="book">
       <div class="bookInner">
