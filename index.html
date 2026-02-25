@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starving Chef App</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        
-        .heroLogoImg {
-            width: 86%;
-            height: 86%;
-            object-fit: contain;
-            filter: /* your filter here */;
-        }
-    </style>
+    <title>The Starving Chef</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <img src="logo.jpeg" alt="Starving Chef Logo" class="heroLogoImg">
+<body class="dark-theme">
+    <header>
+        <div class="hero-logo">
+            <img src="logo.png" alt="The Starving Chef Logo">
+            <h1>Welcome to The Starving Chef</h1>
+        </div>
+    </header>
+    <main>
+        <section class="interactive-menu">
+            <h2>Menu</h2>
+            <ul id="menu-list">
+                <li>Spaghetti Bolognese</li>
+                <li>Chicken Piccata</li>
+                <li>Chocolate Mousse</li>
+            </ul>
+            <button id="show-recipes">Show Recipes</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 The Starving Chef. All rights reserved.</p>
+    </footer>
 </body>
 </html>
