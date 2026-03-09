@@ -47,7 +47,27 @@
       margin:0 auto 20px;
       box-shadow:0 18px 40px rgba(0,0,0,.35);
     }
+.reservation-section{
+padding:40px 20px;
+text-align:center;
+background:rgba(0,0,0,0.55);
+border:1px solid rgba(212,175,55,0.28);
+border-radius:18px;
+margin:30px 0;
+}
 
+.reservation-hero{
+width:100%;
+max-width:700px;
+margin:0 auto 20px;
+display:block;
+border-radius:18px;
+}
+
+.calendar-embed{
+max-width:900px;
+margin:0 auto;
+}
     .logo-wrap img{
       width:100%;
       max-width:100%;
@@ -398,14 +418,37 @@
       background:linear-gradient(135deg, var(--gold), #f0d27a
 </section>
 </div>
-</style>
+
 <section class="reservation-section">
+
+<img src="maitred.jpg" class="reservation-hero">
 
 <h2>Reserve an Evening With The Chef</h2>
 
 <p>
-Select a preferred evening and request a private dining consultation.
-Each event is personally confirmed to maintain our one-event-per-evening standard.
+Select a preferred evening and request your private dining experience.
+Each reservation is personally confirmed.
+</p>
+
+<div class="calendar-embed">
+
+<iframe
+src="https://calendar.google.com/calendar/appointments/YOUR-LINK"
+width="100%"
+height="700"
+style="border:none;border-radius:14px;">
+</iframe>
+
+</div>
+
+</section>
+
+<img src="maitred.jpg" class="reservation-hero">
+
+<h2>Reserve an Evening With The Chef</h2>
+
+<p>
+Select a preferred date and time to request a private dining experience.
 </p>
 
 <div class="reservation-card">
@@ -413,18 +456,23 @@ Each event is personally confirmed to maintain our one-event-per-evening standar
 <label>Preferred Date</label>
 <input type="date" id="resDate">
 
+<label>Preferred Time</label>
+<input type="time" id="resTime">
+
 <label>Guest Count</label>
-<input type="number" id="resGuests" min="2" max="12" placeholder="Number of guests">
+<input type="number" id="resGuests" placeholder="2 - 12">
 
 <label>Your Name</label>
-<input type="text" id="resName" placeholder="Your name">
+<input type="text" id="resName" placeholder="Full name">
 
-<button onclick="submitReservation()" class="enter-btn">
-Request Consultation
+<label>Email</label>
+<input type="email" id="resEmail" placeholder="Email address">
+
+<button onclick="submitReservation()" class="cta-btn">
+Request Reservation
 </button>
 
 </div>
-
 </section>
   
  <p class="footer">
@@ -434,14 +482,33 @@ Request Consultation
   </div>
   <script>
 
-
 function submitReservation(){
-alert("Thank you for your interest in a private dining experience. Please contact The Starving Chef to confirm availability.");
 
-window.location.href="#contact";
+const date = document.getElementById("resDate").value;
+const time = document.getElementById("resTime").value;
+const guests = document.getElementById("resGuests").value;
+const name = document.getElementById("resName").value;
+const email = document.getElementById("resEmail").value;
 
-</script>}
+const subject = "Starving Chef Reservation Request";
+
+const body =
+"Name: " + name +
+"%0D%0AEmail: " + email +
+"%0D%0ADate: " + date +
+"%0D%0ATime: " + time +
+"%0D%0AGuests: " + guests;
+
+window.location.href =
+"mailto:cheftrentlang@gmail.com?subject=" + subject + "&body=" + body;
+
+}
 
 </script>
+
+
+
+
+
 </body>
 </html>
