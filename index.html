@@ -301,7 +301,7 @@
       </section>
     </div>
 302 </div> 
-      color:inherit;
+      
       text-decoration:none;
     }
 
@@ -396,11 +396,52 @@
       padding:14px 30px;
       border-radius:999px;
       background:linear-gradient(135deg, var(--gold), #f0d27a
-304 <p class="footer">
-    >
+</section>
+</div>
+
+<section class="reservation-section">
+
+<h2>Reserve an Evening With The Chef</h2>
+
+<p>
+Select a preferred evening and request a private dining consultation.
+Each event is personally confirmed to maintain our one-event-per-evening standard.
+</p>
+
+<div class="reservation-card">
+
+<label>Preferred Date</label>
+<input type="date" id="resDate">
+
+<label>Guest Count</label>
+<input type="number" id="resGuests" min="2" max="12" placeholder="Number of guests">
+
+<label>Your Name</label>
+<input type="text" id="resName" placeholder="Your name">
+
+<button onclick="submitReservation()" class="enter-btn">
+Request Consultation
+</button>
+
+</div>
+
+</section>
+  
+ <p class="footer">
       The Starving Chef — Private in-home dining experiences across Iowa
     </p>
 
   </div>
+  <script>
+
+
+function submitReservation(){
+alert("Thank you for your interest in a private dining experience. Please contact The Starving Chef to confirm availability.");
+
+window.location.href="#contact";
+
+</script>}
+
+</script>
 </body>
 </html>
